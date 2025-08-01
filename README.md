@@ -36,7 +36,7 @@
 安装步骤
 bash
 ### 1. 克隆仓库
-git clone 
+git clone https://github.com/sddnytsh/ink-note.git
 
 ### 2. 进入目录
 cd ink-note
