@@ -1,0 +1,10 @@
+export const CREATE = "create"
+export const SET = 'set'
+export const SELECT = "select";
+export const SEARCH = "search"
+export const STAR = "star"
+export const ADD = "add"
+export const DELETE = "delete"
+export const DELETE2 = "delete_note";
+export const SELECT2 = "select2"
+export const SAVE = "save";

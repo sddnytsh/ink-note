@@ -1,0 +1,45 @@
+.sidebar {
+  width: 30%;
+  max-width: 300px;
+  min-width: 200px;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fbfbfc;
+  border: solid 1px #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  hr {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background-color: #eee;
+  }
+}
+
+.note {
+  position: absolute;
+  left: 30%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-left: solid 1px #eee;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+@media (width >= 1000px) {
+  .note {
+    left: 300px;
+  }
+}
+
+@media (width <= 666px) {
+  .note {
+    left: 200px;
+  }
+}

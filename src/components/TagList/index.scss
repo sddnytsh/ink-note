@@ -1,0 +1,47 @@
+.tags-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+
+  div:nth-child(1) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 450;
+
+    .tag-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+
+    .tag {
+      font-size: 12px;
+      font-weight: 550;
+      padding: 5px 10px;
+      background-color: #f4f4f4;
+      border-radius: 18px;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .selected {
+      background-color: #333;
+      color: #fff;
+    }
+  }
+}
