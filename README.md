@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 墨记 - 简约个人笔记系统
 
 ![React](https://img.shields.io/badge/React-18.2-blue) 
@@ -53,7 +52,3 @@ npm start	启动开发服务器
 npm run build	生产环境构建
 npm test	运行测试
 npm run eject	暴露webpack配置
-=======
-# ink-note
-简易笔记
->>>>>>> aa4588e4cb705775e015944a686bff9e02aa78cb
