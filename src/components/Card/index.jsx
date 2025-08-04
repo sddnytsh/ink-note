@@ -5,13 +5,25 @@ import store from "../../redux/store";
 import { selectNote } from "../../redux/actions";
 
 export default class Card extends Component {
+  componentDidMount() {
+    store.subscribe(() => {
+      this.setState({});
+    });
+  }
+
   select = () => {
     store.dispatch(selectNote(this.props.note.id));
   };
 
   render() {
+    const { selectedNoteId, theme } = store.getState();
     return (
-      <div className="card" onClick={this.select}>
+      <div
+        className={`card ${
+          selectedNoteId === this.props.note.id ? "border" : ""
+        } ${theme === "light" ? "light" : "dark"}`}
+        onClick={this.select}
+      >
         <h1>{this.props.note.title}</h1>
         <div className="description">{this.props.note.description}</div>
         <div className="identification">

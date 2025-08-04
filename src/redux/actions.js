@@ -49,3 +49,7 @@ export const save = (note) => ({
   type: SAVE,
   payload: note,
 });
+
+export const theme = () => ({
+  type: "theme"
+})

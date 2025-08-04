@@ -1,0 +1,87 @@
+.settings-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: var(--background);
+
+  .open {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: 1;
+    color: var(--color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      border-radius: 12px;
+      display: none;
+      background-color: #ccc;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      display: block;
+    }
+  }
+
+  .settings {
+    margin: 0;
+    position: absolute;
+    bottom: 65px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--color);
+
+    hr {
+      width: 100%;
+      margin: 10px 0;
+      border: none;
+      height: 1px;
+      background-color: #eee;
+    }
+
+    .items {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+
+      .item {
+        width: 270px;
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.light {
+  --background: #fff;
+  --color: #333;
+}
+
+.dark {
+  --background: #111;
+  --color: #fff;
+}
+

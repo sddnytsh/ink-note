@@ -1,4 +1,4 @@
-.logo {
+.logo1 {
   width: 100%;
   height: 52px;
   box-sizing: border-box;
@@ -25,6 +25,39 @@
 
   h1 {
     color: #333;
+    margin: 0;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.logo2 {
+  width: 100%;
+  height: 52px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+
+  div {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+
+  h1 {
+    color: #fff;
     margin: 0;
     font-size: 18px;
     line-height: 32px;

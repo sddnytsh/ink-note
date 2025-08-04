@@ -11,6 +11,7 @@
     width: 100%;
     box-sizing: border-box;
     padding-inline: 10px;
+    color: var(--color);
 
     h1 {
       font-size: 20px;
@@ -83,7 +84,8 @@
       font-size: 12px;
       font-weight: 550;
       padding: 5px 10px;
-      background-color: #f4f4f4;
+      background-color: var(--background2);
+      color: var(--color);
       border-radius: 18px;
       white-space: nowrap;
       max-width: 100%;
@@ -109,6 +111,8 @@
       border-radius: 8px;
       width: 100px;
       padding: 5px 10px;
+      background-color: var(--background);
+      color: var(--color);
     }
 
     .plus {
@@ -122,6 +126,7 @@
       svg {
         width: 20px;
         height: 20px;
+        color: var(--color);
       }
 
       &:hover {
@@ -133,11 +138,29 @@
 
 .content {
   width: 100%;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 170px);
 
   textarea {
     width: 100%;
     height: 100%;
     resize: none;
+    background-color: var(--background);
+    color: var(--color);
   }
+}
+
+.light {
+  --background: #fff;
+  --background2: #f4f4f4;
+  --background3: #333;
+  --color: #333;
+  --color2: #fff;
+}
+
+.dark {
+  --background: #111;
+  --background2: #333;
+  --background3: #fff;
+  --color: #fff;
+  --color2: #333;
 }

@@ -87,7 +87,7 @@ export default class Note extends Component {
   };
 
   render() {
-    const { notes, selectedNoteId } = store.getState();
+    const { notes, selectedNoteId, theme } = store.getState();
     const selectedNote = notes.find((note) => note.id === selectedNoteId);
 
     return selectedNote === undefined ? null : (
@@ -98,7 +98,7 @@ export default class Note extends Component {
       //       : notes.map((note, _) => <Card key={note.id} note={note} />)}
       //   </div>
       // )
-      <div className="note">
+      <div className={`note ${theme === "light" ? "light" : "dark"}`}>
         <div className="header">
           <div className="title">
             <h1>{selectedNote.title}</h1>

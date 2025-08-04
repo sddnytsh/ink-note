@@ -16,10 +16,10 @@ export default class TagList extends Component {
   };
 
   render() {
-    const { notes, selectedNoteTags } = store.getState();
+    const { notes, selectedNoteTags, theme } = store.getState();
     const allTags = Array.from(new Set(notes.flatMap((note) => note.tags)));
     return (
-      <div className="tags-container">
+      <div className={`tags-container ${theme === "light" ? "light" : "dark"}`}>
         <div>
           <Tag className="tag-icon" /> 标签
         </div>

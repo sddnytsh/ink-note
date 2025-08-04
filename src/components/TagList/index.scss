@@ -6,6 +6,8 @@
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
+  background-color: var(--background);
+  color: var(--color);
 
   div:nth-child(1) {
     display: flex;
@@ -31,17 +33,34 @@
       font-size: 12px;
       font-weight: 550;
       padding: 5px 10px;
-      background-color: #f4f4f4;
+      background-color: var(--background2);
       border-radius: 18px;
       white-space: nowrap;
       max-width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
+      color: var(--color);
     }
 
     .selected {
-      background-color: #333;
-      color: #fff;
+      background-color: var(--background3);
+      color: var(--color2);
     }
   }
+}
+
+.light {
+  --background: #fff;
+  --background2: #f4f4f4;
+  --background3: #333;
+  --color: #333;
+  --color2: #fff;
+}
+
+.dark {
+  --background: #111;
+  --background2: #333;
+  --background3: #fff;
+  --color: #fff;
+  --color2: #333;
 }

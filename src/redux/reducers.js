@@ -5,7 +5,8 @@ const initialState = {
     selectedNoteId: null,
     nextId: 1,
     searchText: "",
-    selectedNoteTags: []
+    selectedNoteTags: [],
+    theme: "light"
 };
 
 export default function notesReducer(state = initialState, action) {
@@ -14,6 +15,9 @@ export default function notesReducer(state = initialState, action) {
             const newNote = {
                 ...action.payload,
                 id: state.nextId,
+                isStarred: false,
+                updateAt: null,
+                tags: [],
             };
             return {
                 ...state,
@@ -82,26 +86,12 @@ export default function notesReducer(state = initialState, action) {
                         : note
                 ),
             };
+        case "theme":
+            return {
+                ...state,
+                theme: state.theme === "light" ? "dark" : "light"
+            }
         default:
             return state
     }
 }
-
-// [
-//   {
-//     "id": 1,
-//     "title": "Note 1",
-//     "description": "This is the first note.",
-//     "tags": ["tag1", "tag2"],
-//     "date": "2025-07-31T12:34:56Z",
-//     "content": "adshbaibfeaiwbfeiw "
-//   },
-//   {
-//     "id": 2,
-//     "title": "Note 2",
-//     "description": "This is the second note.",
-//     "tags": ["tag3", "tag4"],
-//     "date": "2025-07-30T12:34:56Z"
-//     "content": "adshbaibfeaiwbfeiw "
-//   }
-// ]

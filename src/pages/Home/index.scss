@@ -2,11 +2,11 @@
   width: 30%;
   max-width: 300px;
   min-width: 200px;
-  height: 100vh;
+  height: calc(100vh - 2px);
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #fbfbfc;
+  background-color: var(--background-color1);
   border: solid 1px #eee;
   display: flex;
   flex-direction: column;
@@ -26,10 +26,11 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--background-color2);
   border-left: solid 1px #eee;
   box-sizing: border-box;
   padding: 10px;
+  overflow: hidden;
 }
 
 @media (width >= 1000px) {
@@ -42,4 +43,14 @@
   .note {
     left: 200px;
   }
+}
+
+.light {
+  --background-color1:#fbfbfc;
+  --background-color2: #fff;
+}
+
+.dark {
+  --background-color1:#111110;
+  --background-color2: #111;
 }
